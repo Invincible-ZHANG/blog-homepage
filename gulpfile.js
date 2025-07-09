@@ -14,7 +14,7 @@ const less = require('gulp-less')
 const config = require('./config.json')
 
 gulp.task('clean', function () {
-	return del(['./docs/css/', './docs/js/'])
+	return del(['./dist/css/', './dist/js/'])
 })
 
 gulp.task('css', function () {
@@ -27,15 +27,15 @@ gulp.task('css', function () {
 		.pipe(minifycss({ compatibility: 'ie8' }))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 version'] }))
 		.pipe(cssnano({ reduceIdents: false }))
-		.pipe(gulp.dest('./docs/css'))
+		.pipe(gulp.dest('./dist/css'))
 })
 
 gulp.task('html', function () {
 	return gulp
-		.src('./docs/index.html')
+		.src('./dist/index.html')
 		.pipe(htmlclean())
 		.pipe(htmlmin())
-		.pipe(gulp.dest('./docs'))
+		.pipe(gulp.dest('./dist'))
 })
 
 gulp.task('js', function () {
@@ -43,20 +43,20 @@ gulp.task('js', function () {
 		.src('./src/js/*.js')
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
 		.pipe(uglify())
-		.pipe(gulp.dest('./docs/js'))
+		.pipe(gulp.dest('./dist/js'))
 })
 
 gulp.task('pug', function () {
 	return gulp
 		.src('./src/*.pug')
 		.pipe(pug({ data: config }))
-		.pipe(gulp.dest('./docs'))
+		.pipe(gulp.dest('./dist'))
 })
 
 gulp.task('assets', function () {
 	return gulp
 		.src(['./src/assets/**/*'])
-		.pipe(gulp.dest('./docs/assets'));
+		.pipe(gulp.dest('./dist/assets'));
 })
 
 gulp.task('build', gulp.series('clean', 'assets', 'pug', 'css', 'js', 'html'))
@@ -68,7 +68,7 @@ gulp.task('watch', function () {
 	gulp.watch('./src/css/**/*.scss', gulp.parallel(['css']))
 	gulp.watch('./src/js/*.js', gulp.parallel(['js']))
 	connect.server({
-		root: 'docs',
+		root: 'dist',
 		livereload: true,
 		port: 8080
 	})
