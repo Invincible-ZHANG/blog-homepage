@@ -1,0 +1,45 @@
+{
+	"head": {
+		"title": "Invincible-Zhang",
+		"description": "Author:Chikin Cheung,Category:Personal Blog",
+		"favicon": "favicon.ico"
+	},
+	"intro": {
+		"title": "Chikin Cheung",
+		"subtitle": "Practice is the sole criterion for testing truth",
+		"enter": "enter",
+		"supportAuthor": false,
+		"background": true
+	},
+	"main": {
+		"name": "Chikin Cheung",
+		"signature": "Code & Input & Output",
+		"avatar": {
+			"link": "assets/avatar.png",
+			"height": "100",
+			"width": "100"
+		},
+		"ul": {
+			"first": {
+				"href": "https://invincible-zhang.github.io/Technical-Interview-NOTE-Baguwen-Style/",
+				"icon": "bokeyuan",
+				"text": "Blog"
+			},
+			"second": {
+				"href": "about.html",
+				"icon": "xiaolian",
+				"text": "About"
+			},
+			"third": {
+				"href": "mailto:zhangzijiandavid@outlook.com",
+				"icon": "email",
+				"text": "Email"
+			},
+			"fourth": {
+				"href": "https://github.com/Invincible-ZHANG",
+				"icon": "github",
+				"text": "Github"
+			}
+		}
+	}
+}

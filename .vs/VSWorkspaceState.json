@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dist",
+    "\\dist\\assets",
+    "\\dist\\components",
+    "\\dist\\js",
+    "\\src",
+    "\\src\\css",
+    "\\src\\css\\common",
+    "\\src\\css\\intro",
+    "\\src\\js"
+  ],
+  "SelectedNode": "\\src\\js\\typing.js",
+  "PreviewInSolutionExplorer": false
+}

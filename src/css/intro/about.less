@@ -1,0 +1,132 @@
+.mac-terminal {
+	background-color: #1e1e1e;
+	color: #33ff33;
+	font-family: Menlo, Monaco, "Courier New", monospace;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.terminal-window {
+	background-color: #2e2e2e;
+	width: 80%;
+	max-width: 800px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* 顶部标题栏 */
+.terminal-bar {
+	background-color: #444;
+	padding: 0.5em 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	font-weight: bold;
+	position: relative;
+}
+
+/* 三个按钮 */
+.terminal-buttons {
+	display: flex;
+	gap: 0.5em;
+}
+
+.terminal-buttons span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+.red {
+	background-color: #ff5f56;
+}
+
+.yellow {
+	background-color: #ffbd2e;
+}
+
+.green {
+	background-color: #27c93f;
+}
+
+/* 标题文本居中 */
+.terminal-title {
+	flex: 1;
+	text-align: center;
+	font-size: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 内容区域 */
+.terminal-content {
+	padding: 1em;
+}
+
+/* 每一行输出 */
+.line {
+	margin: 0.3em 0;
+	white-space: pre-wrap;
+	word-break: break-word;
+	font-size: 1.05em;
+	color: #33ff33;
+}
+
+/* 打字光标效果 */
+.typing::after {
+	content: "_";
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0%, 50% {
+		opacity: 1;
+	}
+
+	51%, 100% {
+		opacity: 0;
+	}
+}
+
+/* ----------------------------- */
+/* ✅ 自定义标签色彩样式部分 ✅ */
+/* ----------------------------- */
+
+.label-system {
+	background-color: #6c5ce7;
+	color: white;
+	padding: 0.1em 0.5em;
+	border-radius: 4px;
+	margin-right: 0.5em;
+	display: inline-block;
+}
+
+.label-time {
+	background-color: #0984e3;
+	color: white;
+	padding: 0.1em 0.5em;
+	border-radius: 4px;
+	margin-right: 0.5em;
+	display: inline-block;
+}
+
+.label-key {
+	font-weight: bold;
+	color: #74b9ff;
+	margin-right: 0.3em;
+}
+
+.label-done {
+	background-color: #00b894;
+	color: white;
+	padding: 0.1em 0.5em;
+	border-radius: 4px;
+	margin-right: 0.5em;
+	display: inline-block;
+}
