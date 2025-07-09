@@ -128,16 +128,16 @@ head
 
 ## 项目部署
 
-在根目录下执行`npm run build` 后，会将项目文件生成到 `dist` 目录。
+在根目录下执行`npm run build` 后，会将项目文件生成到 `docs` 目录。
 
-然后，你可以将`dist`目录部署到你喜欢的服务器托管商。
+然后，你可以将`docs`目录部署到你喜欢的服务器托管商。
 
 下面以`GithubPage` 举例：
 
 1. 新建 `你的用户名.github.io` 仓库
 
 2. ```sh
-   cd dist
+   cd docs
    git init
    git add -A
    git commit -am"init"

@@ -124,16 +124,16 @@ The replacement steps are as follows:
 
 ## Deployment
 
-After executing `npm run build` under the root directory, the project file will be generated to the `dist` directory.
+After executing `npm run build` under the root directory, the project file will be generated to the `docs` directory.
 
-You can then deploy the dist directory to your favorite server hosting provider.
+You can then deploy the docs directory to your favorite server hosting provider.
 
 The following is an example of `GithubPage`:
 
 1. create `userName.github.io` Repo
 
 2. ```sh
-   cd dist
+   cd docs
    git init
    git add -A
    git commit -am"init"
